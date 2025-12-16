@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Портфолио графического дизайнера Киреевой Светланы. Брендинг, UI/UX, иллюстрации.">
+  <title>Светлана Киреева | Графический дизайнер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__content">
+    <div class="header__info">
+      <h1 class="header__name">Киреева Светлана</h1>
+      <p class="header__title">Графический дизайнер & UI/UX специалист</p>
+    </div>
+    
+    <nav class="header__nav" aria-label="Основная навигация">
+      <div class="nav__links">
+        <a href="#projects" class="nav__link">Проекты</a>
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#contact" class="nav__link">Контакты</a>
+      </div>
+      <button id="themeToggle" aria-label="Переключить тему" title="Сменить тему">
+        <span class="theme-icon">🌙</span>
+        <span class="visually-hidden">Переключить тему</span>
+      </button>
+    </nav>
+    
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="about" id="about">
+    <h2>Обо мне</h2>
+    <p>
+      Привет! Я профессиональный графический дизайнер с 5-летним опытом в брендинге, UI/UX и визуальных коммуникациях. 
+      Специализируюсь на создании современных, функциональных и эстетичных решений, которые решают бизнес-задачи клиентов. 
+      В этом портфолио собраны мои ключевые проекты за последние 2 года.
+    </p>
+  </section>
+
+  <section class="filters" id="projects">
+    <div class="filters__header">
+      <h2 class="filters__title">Мои проекты</h2>
+      <span class="projects__count" id="projectsCount"></span>
+    </div>
+    
+    <div class="filters__group">
+      <select id="categoryFilter" class="filter-select">
+        <option value="all">Все направления</option>
+        <option value="branding">Брендинг</option>
+        <option value="poster">Постеры</option>
+        <option value="ui">UI/UX дизайн</option>
+        <option value="illustration">Иллюстрации</option>
+      </select>
+      
+      <select id="techFilter" class="filter-select">
+        <option value="all">Все технологии</option>
+        <option value="Illustrator">Adobe Illustrator</option>
+        <option value="Photoshop">Adobe Photoshop</option>
+        <option value="Figma">Figma</option>
+        <option value="Procreate">Procreate</option>
+        <option value="After Effects">After Effects</option>
+      </select>
+      
+      <select id="levelFilter" class="filter-select">
+        <option value="all">Любая сложность</option>
+        <option value="beginner">Начальный</option>
+        <option value="intermediate">Средний</option>
+        <option value="advanced">Продвинутый</option>
+      </select>
+    </div>
+    
+    <div class="active-filters" id="activeFilters"></div>
+    
+    <button id="resetFilters" class="filter-reset">
+      <span>Сбросить фильтры</span>
+      <span id="activeCount">0</span>
+    </button>
+  </section>
+
+  <section class="projects">
+    <div class="projects__header">
+      <h3 class="projects__title">Работы</h3>
+    </div>
+    <ul id="projectsList"></ul>
+  </section>
+</main>
+
+<!-- МОБИЛЬНОЕ МЕНЮ -->
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__content">
+    <a href="#projects" class="mobile-menu__link">Проекты</a>
+    <a href="#about" class="mobile-menu__link">Обо мне</a>
+    <a href="#contact" class="mobile-menu__link">Контакты</a>
+    <button id="mobileThemeToggle" class="mobile-menu__theme">
+      <span>Сменить тему</span>
+      <span>🌙</span>
+    </button>
+  </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+  <div class="viewer__content">
+    <button id="closeViewer" aria-label="Закрыть">×</button>
+    <h3 id="viewerTitle"></h3>
+    <div id="viewerDescription"></div>
+    <div class="viewer__gallery" id="viewerGallery"></div>
+  </div>
+</div>
+
+<footer class="footer" id="contact">
+  <div class="footer__content">
+    <div class="footer__brand">
+      <h3 class="footer__name">Киреева Светлана</h3>
+      <p class="footer__title">Графический дизайнер</p>
+      <p class="footer__bio">
+        Создаю визуальные решения, которые работают. 
+        От концепции до реализации, с фокусом на деталях и пользовательском опыте.
+      </p>
+    </div>
+    
+    <div class="footer__section">
+      <h3>Контакты</h3>
+      <ul class="footer__links">
+        <li>
+          <a href="mailto:svetlanakireeva.design@mail.com" class="footer__link">
+            svetlanakireeva.design@mail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/svetlanakikeeva_design" target="_blank" class="footer__link">
+            Telegram: @svetlanakikeeva_design
+          </a>
+        </li>
+        <li>
+          <a href="tel:+79001234567" class="footer__link">
+            +7 (900) 123-45-67
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footer__section">
+      <h3>Соцсети</h3>
+      <ul class="footer__links">
+        <li>
+          <a href="https://behance.net/svetlanakireeva" target="_blank" class="footer__link">
+            Behance
+          </a>
+        </li>
+        <li>
+          <a href="https://dribbble.com/svetlanakireeva" target="_blank" class="footer__link">
+            Dribbble
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/svetlanakireeva" target="_blank" class="footer__link">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+      
+      <div class="footer__social">
+        <a href="https://behance.net/svetlanakireeva" target="_blank" class="social__link" aria-label="Behance">
+          <span>B</span>
+        </a>
+        <a href="https://dribbble.com/svetlanakireeva" target="_blank" class="social__link" aria-label="Dribbble">
+          <span>D</span>
+        </a>
+        <a href="https://linkedin.com/in/svetlanakireeva" target="_blank" class="social__link" aria-label="LinkedIn">
+          <span>in</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer__copyright">
+    <p>© 2024 Киреева Светлана. Все права защищены.</p>
+    <p>Портфолио обновлено: декабрь 2024</p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
