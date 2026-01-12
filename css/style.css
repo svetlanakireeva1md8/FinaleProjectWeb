@@ -1,4 +1,3 @@
-
 :root {
   --bg: #ffffff;
   --text: #111;
@@ -650,6 +649,70 @@ h3 {
   margin-top: 0.5rem;
 }
 
+/* Исправления для мобильных изображений в viewer */
+@media (max-width: 767px) {
+  .viewer__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .viewer__image {
+    width: 100%;
+    min-height: 200px;
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .viewer__image img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .viewer__image img:not([src]),
+  .viewer__image img[src=""] {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .viewer__caption {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+  }
+  
+  /* Убедитесь, что контент виден */
+  .viewer__content {
+    max-height: 95vh;
+    margin: 0.5rem;
+  }
+}
+
+/* Гарантируем загрузку изображений */
+.viewer__image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.viewer__image img[src=""] {
+  opacity: 0;
+}
+
 /* Footer */
 .footer {
   background: var(--card);
@@ -847,4 +910,5 @@ h3 {
   .viewer__content {
     padding: 0;
   }
+  
 }

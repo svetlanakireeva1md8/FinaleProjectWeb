@@ -1,3 +1,4 @@
+
 export const projects = [
   {
     id: 1,
@@ -7,79 +8,96 @@ export const projects = [
     tech: "Illustrator, Photoshop",
     level: "advanced",
     images: [
-      "assets/images/branding1.jpg",
-      "assets/images/branding2.jpg",
-      "assets/images/branding3.jpg"
+      "./img/branding1.jpg",
+      "./img/branding2.jpg", 
+      "./img/branding3.jpg"
     ],
     year: 2024
   },
   {
     id: 2,
-    title: "Постеры для фестиваля 'SoundWave'",
-    category: "poster",
-    description: "Серия афиш для музыкального фестиваля электронной музыки. Использованы неоновые цвета и геометрические формы для передачи динамики и энергии мероприятия.",
-    tech: "Photoshop, After Effects",
-    level: "intermediate",
+    title: "Линейная стилизация",
+    category: "illustration",
+    description: "Серия иллюстраций, выполненных в виде непрерывной линии для бренда модной детской одежды.",
+    tech: "Figma",
+    level: "beginner",
     images: [
-      "assets/images/poster1.jpg",
-      "assets/images/poster2.jpg",
-      "assets/images/poster3.jpg"
+      "./img/24.png", 
+      "./img/25.png",
+      "./img/26.png",
+      "./img/27.png", 
+      "./img/28.png"
     ],
     year: 2023
   },
   {
-    id: 3,
-    title: "Мобильное приложение 'FitTrack'",
-    category: "ui",
-    description: "UI/UX дизайн приложения для отслеживания фитнес-активности. Проработаны user flow, прототипы и финальный дизайн с акцентом на usability.",
-    tech: "Figma, Protopie",
-    level: "advanced",
-    images: [
-      "assets/images/ui1.jpg",
-      "assets/images/ui2.jpg",
-      "assets/images/ui3.jpg"
-    ],
-    year: 2024
-  },
+  id: 3,
+  title: "Мобильное приложение 'FitTrack'",
+  category: "ui",
+  description: "UI/UX дизайн приложения для отслеживания фитнес-активности. Проработаны user flow, прототипы и финальный дизайн с акцентом на usability.",
+  tech: "Figma, Protopie",
+  level: "advanced",
+  images: [
+    "hhttps://ibb.co/hFbdTXhw",
+    "https://ibb.co/hFbdTXhw",
+    "https://ibb.co/hFbdTXhw"
+  ],
+  year: 2024
+},
   {
     id: 4,
-    title: "Цифровые иллюстрации 'Cosmic Dreams'",
+    title: "Знаки Зодиака",
     category: "illustration",
-    description: "Серия авторских иллюстраций в космической тематике. Смешение акварельной текстуры и цифровых техник.",
+    description: "Серия авторских иллюстраций в астрологической тематике для велосипедной компании. Иллюстрации выполнены в стиле кинематографического фэнтези с элементами сюрреализма и гиперреалистичным светом.",
     tech: "Procreate, Photoshop",
-    level: "intermediate",
-// Пример для первого проекта
-images: [
-  "https://via.placeholder.com/800x600/ff6b6b/ffffff?text=Branding+1",
-  "https://via.placeholder.com/800x600/4ecdc4/ffffff?text=Branding+2",
-  "https://via.placeholder.com/800x600/45b7d1/ffffff?text=Branding+3"
-],
-    year: 2023
+    level: "advanced",
+    images: [
+      "./img/1.png", 
+      "./img/2.png",
+      "./img/3.png",
+      "./img/4.png", 
+      "./img/5.png",
+      "./img/6.png",
+      "./img/7.png", 
+      "./img/8.png",
+      "./img/9.png",
+      "./img/10.png", 
+      "./img/11.png",
+      "./img/12.png"
+    ],
+    year: 2025
   },
   {
     id: 5,
-    title: "Ребрендинг книжного магазина",
+    title: "Разработка логотипов",
     category: "branding",
-    description: "Обновление визуальной идентификации для сети книжных магазинов. Создан новый логотип и система графических элементов.",
+    description: "В портфолио — шрифтовые логотипы, сложные знаки и минималистичные эмблемы. Каждый создан для конкретной задачи и аудитории.",
     tech: "Illustrator, InDesign",
-    level: "advanced",
+    level: "intermediate",
     images: [
-      "assets/images/branding4.jpg",
-      "assets/images/branding5.jpg"
+      "./img/13.png", 
+      "./img/14.png",
+      "./img/15.png",
+      "./img/16.png", 
+      "./img/17.png",
+      "./img/18.png"
     ],
-    year: 2023
+    year: 2025
   },
   {
     id: 6,
-    title: "Landing Page для стартапа",
-    category: "ui",
-    description: "Дизайн лендинга для IT-стартапа. Акцент на простоте, ясной структуре и призыве к действию.",
-    tech: "Figma, Webflow",
-    level: "beginner",
+    title: "Хуманизация",
+    category: "illustration",
+    description: "Серия тематических персонажей - хуманизированные животные-спортсмены.",
+    tech: "Figma",
+    level: "intermediate",
     images: [
-      "assets/images/ui4.jpg",
-      "assets/images/ui5.jpg"
+      "./img/19.png", 
+      "./img/20.png",
+      "./img/21.png",
+      "./img/22.png", 
+      "./img/23.png"
     ],
-    year: 2023
-  }
+    year: 2024
+  },
 ];
