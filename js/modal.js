@@ -73,8 +73,7 @@ export function closeViewer() {
 function getCategoryLabel(category) {
   const labels = {
     branding: 'Брендинг',
-    poster: 'Постеры',
-    ui: 'UI/UX',
+    infographic: 'Инфографика',
     illustration: 'Иллюстрации'
   };
   return labels[category] || category;

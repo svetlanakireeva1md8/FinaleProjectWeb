@@ -48,8 +48,7 @@ export function renderProjects(projects, container) {
 function getCategoryLabel(category) {
   const labels = {
     branding: 'Брендинг',
-    poster: 'Постер',
-    ui: 'UI/UX',
+    infographic: 'Инфографика',
     illustration: 'Иллюстрация'
   };
   return labels[category] || category;

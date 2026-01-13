@@ -130,8 +130,7 @@ function getFilterLabel(type, value) {
   const labels = {
     category: {
       branding: 'Брендинг',
-      poster: 'Постеры',
-      ui: 'UI/UX',
+      infographic: 'Инфографика',
       illustration: 'Иллюстрации'
     },
     tech: {
@@ -214,6 +213,7 @@ list.addEventListener("click", (e) => {
 // Закрытие модального окна
 document.getElementById("closeViewer").onclick = closeViewer;
 document.getElementById("themeToggle").onclick = toggleTheme;
+
 
 // Закрытие по клику вне контента
 document.getElementById("viewer").addEventListener("click", (e) => {

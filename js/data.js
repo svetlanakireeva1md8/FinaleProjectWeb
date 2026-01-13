@@ -2,17 +2,24 @@
 export const projects = [
   {
     id: 1,
-    title: "Брендинг кофейни 'Urban Brew'",
-    category: "branding",
-    description: "Полный брендинг для сети кофеен премиум-класса. Разработаны логотип, фирменный стиль, упаковка и мерч. Основная задача — передать атмосферу уюта и качества через минималистичный дизайн.",
-    tech: "Illustrator, Photoshop",
+    title: "Skill Bike",
+    category: "infographic",
+    description: "Шаблон сезонной инфографики для бренда велосипедов.",
+    tech: "Figma, Photoshop",
     level: "advanced",
     images: [
-      "./img/branding1.jpg",
-      "./img/branding2.jpg", 
-      "./img/branding3.jpg"
+      "./img/39.jpg", 
+      "./img/40.jpg",
+      "./img/41.jpg",
+      "./img/42.jpg", 
+      "./img/43.jpg",
+      "./img/44.jpg",
+      "./img/45.jpg", 
+      "./img/46.jpg",
+      "./img/47.jpg",
+      "./img/48.jpg"
     ],
-    year: 2024
+    year: 2026
   },
   {
     id: 2,
@@ -28,20 +35,27 @@ export const projects = [
       "./img/27.png", 
       "./img/28.png"
     ],
-    year: 2023
+    year: 2024
   },
   {
   id: 3,
-  title: "Мобильное приложение 'FitTrack'",
-  category: "ui",
-  description: "UI/UX дизайн приложения для отслеживания фитнес-активности. Проработаны user flow, прототипы и финальный дизайн с акцентом на usability.",
-  tech: "Figma, Protopie",
-  level: "advanced",
+  title: "Ева MASH",
+  category: "infographic",
+  description: "Креативная инфография для коллаборации велосипедного бренда Skill Bike с блогером Евой Mash.",
+  tech: "Figma",
+  level: "beginner",
   images: [
-    "hhttps://ibb.co/hFbdTXhw",
-    "https://ibb.co/hFbdTXhw",
-    "https://ibb.co/hFbdTXhw"
-  ],
+      "./img/29.png", 
+      "./img/30.png",
+      "./img/31.png",
+      "./img/32.png", 
+      "./img/33.png",
+      "./img/34.png",
+      "./img/35.png", 
+      "./img/36.png",
+      "./img/37.png",
+      "./img/38.png"
+    ],
   year: 2024
 },
   {
